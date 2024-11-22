@@ -1,0 +1,4 @@
+[debug] [actors-build] Classpath dependencies List()
+[debug] [actors-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'actors-build' to '/home/hugo/Documents/cloud_data/actors/project/.bloop/actors-build.json'
+[success] Generated .bloop/actors-build.json
