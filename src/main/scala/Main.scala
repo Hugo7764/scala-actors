@@ -38,7 +38,7 @@ object Main {
         logger.info(s"Server now online. Please navigate to http:/${binding.localAddress.toString}")
     }
 
-    Behaviors.ignore
+    Behaviors.ignore 
   }
 
   def main(args: Array[String]): Unit = {
