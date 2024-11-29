@@ -33,7 +33,9 @@ case class RoomActor(name: String) {
           val post = posts.last
           replyTo ! Some(post)
         }
-        else replyTo ! None
+        else {
+          replyTo ! None
+        }
         Behaviors.same
       case Message.GetPost(id, replyTo) =>
         ???

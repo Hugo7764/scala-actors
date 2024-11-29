@@ -21,7 +21,11 @@ object RoomListActor {
             apply(rooms + (name -> room))
           }
           else Behaviors.same
-        case GetRoom(name, replyTo) => ???
+        case GetRoom(name, replyTo) => 
+          if(!rooms.contains(name)) {
+            replyTo ! 
+          }
+          else Behaviors.same
       }
     }
   }
