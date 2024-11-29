@@ -22,12 +22,15 @@ case class RoomActor(name: String) {
 
   private def handle(posts: SortedSet[Post]): Behavior[Message] = {
     Behaviors.receiveMessage {
+      // crée un post et actualise l'état de l'acteur (ensemble des posts)
       case Message.CreatePost(author, content) =>
         val post = Post(UUID.randomUUID(), author, OffsetDateTime.now(), content)
         handle(posts + post)
+      // renvoie l'ensemble des pots au RoomListActor et garde l'état actuel
       case Message.ListPosts(replyTo) =>
         replyTo ! posts
         Behaviors.same
+      // renvoie le dernier post au RoomListActor et garde l'éat actuel
       case Message.LatestPost(replyTo) =>
         if(!posts.isEmpty) {
           val post = posts.last
@@ -37,6 +40,7 @@ case class RoomActor(name: String) {
           replyTo ! None
         }
         Behaviors.same
+      // renvoie une Option du post correspondant au RoomlistActor et garde l'état actuel
       case Message.GetPost(id, replyTo) =>
         val post = posts.find(_.id == id)
         replyTo ! post
