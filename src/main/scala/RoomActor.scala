@@ -31,7 +31,7 @@ case class RoomActor(name: String) {
       case Message.LatestPost(replyTo) =>
         if(!posts.isEmpty) {
           val post = posts.last
-          replyTo ! post
+          replyTo ! Some(post)
         }
         else replyTo ! None
         Behaviors.same

@@ -1,7 +1,13 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /home/hugo/Documents/Scala/scala-actors/src/main/scala/RoomActor.scala:33:30 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m33 |[0m          [33mval[0m [36mpost[0m = Ordering[[35mposts[0m] [34m// à fix[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                              ^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                              Not found: type posts[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /home/hugo/Documents/Scala/scala-actors/src/main/scala/RoomActor.scala:34:20 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m34 |[0m          replyTo ! post[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                    ^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mFound:    [1m[31m([0m[1m[31mpost[0m[1m[31m [0m[1m[31m:[0m[1m[31m [0mfr.cytech.icc.Post[1m[31m)[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mRequired: [1m[32mOption[0m[1m[32m[[0mfr.cytech.icc.Post[1m[32m][0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mThe following import might fix the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import org.apache.pekko.http.scaladsl.server.PathMatcher.Lift.MOps.OptionMOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
