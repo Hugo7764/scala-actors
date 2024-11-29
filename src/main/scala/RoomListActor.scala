@@ -16,8 +16,11 @@ object RoomListActor {
     Behaviors.setup { context =>
       Behaviors.receiveMessage {
         case CreateRoom(name)       => 
-          val room = context.spawn(RoomActor(name), name)
-          apply(rooms + (name -> room))
+          if(!rooms.contains(name)) {
+            val room = context.spawn(RoomActor(name), name)
+            apply(rooms + (name -> room))
+          }
+          else Behaviors.same
         case GetRoom(name, replyTo) => ???
       }
     }
