@@ -23,7 +23,8 @@ case class RoomActor(name: String) {
   private def handle(posts: SortedSet[Post]): Behavior[Message] = {
     Behaviors.receiveMessage {
       case Message.CreatePost(author, content) =>
-        ???
+        val post = new Post(UUID.randomUUID(), author, OffsetDateTime.now(), content)
+        handle(posts + post)
       case Message.ListPosts(replyTo) =>
         ???
       case Message.LatestPost(replyTo) =>
