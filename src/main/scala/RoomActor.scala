@@ -38,8 +38,8 @@ case class RoomActor(name: String) {
         }
         Behaviors.same
       case Message.GetPost(id, replyTo) =>
-        
-
+        val post = posts.find(_.id == id)
+        replyTo ! post
     }
   }
 }

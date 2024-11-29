@@ -1,12 +1,13 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /home/hugo/Documents/Scala/scala-actors/src/main/scala/RoomActor.scala:34:20 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m34 |[0m          replyTo ! post[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                    ^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mFound:    [1m[31m([0m[1m[31mpost[0m[1m[31m [0m[1m[31m:[0m[1m[31m [0mfr.cytech.icc.Post[1m[31m)[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mRequired: [1m[32mOption[0m[1m[32m[[0mfr.cytech.icc.Post[1m[32m][0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /home/hugo/Documents/Scala/scala-actors/src/main/scala/RoomActor.scala:42:8 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m42 |[0m        replyTo ! post[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m        ^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mFound:    Unit[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mRequired: org.apache.pekko.actor.typed.Behavior[fr.cytech.icc.Message][0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mThe following import might fix the problem:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mOne of the following imports might make progress towards fixing the problem:[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import org.apache.pekko.http.scaladsl.server.PathMatcher.Lift.MOps.OptionMOps[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import org.apache.pekko.http.impl.util.JavaMapping.Implicits.convertToScala[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  import org.apache.pekko.http.javadsl.server.RoutingJavaMapping.Implicits.convertToScala[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
 [0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
