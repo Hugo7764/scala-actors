@@ -38,7 +38,7 @@ case class RoomActor(name: String) {
         }
         Behaviors.same
       case Message.GetPost(id, replyTo) =>
-        ???
+        
 
     }
   }

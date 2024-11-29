@@ -113,7 +113,8 @@ case class Controller(
     }
   )
 
-  private def createRoom(input: RoomInput) = ???
+  private def createRoom(input: RoomInput) = 
+    
 
   private def listRooms() = ???
 

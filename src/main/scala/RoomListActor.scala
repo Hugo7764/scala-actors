@@ -23,9 +23,12 @@ object RoomListActor {
           else Behaviors.same
         case GetRoom(name, replyTo) => 
           if(!rooms.contains(name)) {
-            replyTo ! 
+            replyTo ! Some() // Il me manque la récupération sur la map, je cale
           }
-          else Behaviors.same
+          else {
+            replyTo ! None
+          }
+          Behaviors.same
       }
     }
   }
