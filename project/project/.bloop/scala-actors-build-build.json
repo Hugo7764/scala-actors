@@ -1,16 +1,16 @@
 {
     "version": "1.4.0",
     "project": {
-        "name": "actors-build",
-        "directory": "/home/hugo/Documents/cloud_data/actors/project",
-        "workspaceDir": "/home/hugo/Documents/cloud_data/actors/project",
+        "name": "scala-actors-build-build",
+        "directory": "/home/hugo/Documents/Scala/scala-actors/project/project",
+        "workspaceDir": "/home/hugo/Documents/Scala/scala-actors/project/project",
         "sources": [
-            "/home/hugo/Documents/cloud_data/actors/project/src/main/scala",
-            "/home/hugo/Documents/cloud_data/actors/project/src/main/scala-2.12",
-            "/home/hugo/Documents/cloud_data/actors/project/src/main/scala-2",
-            "/home/hugo/Documents/cloud_data/actors/project/src/main/java",
-            "/home/hugo/Documents/cloud_data/actors/project/src/main/scala-sbt-1.0",
-            "/home/hugo/Documents/cloud_data/actors/project/target/scala-2.12/sbt-1.0/src_managed/main"
+            "/home/hugo/Documents/Scala/scala-actors/project/project/src/main/scala",
+            "/home/hugo/Documents/Scala/scala-actors/project/project/src/main/scala-2.12",
+            "/home/hugo/Documents/Scala/scala-actors/project/project/src/main/scala-2",
+            "/home/hugo/Documents/Scala/scala-actors/project/project/src/main/java",
+            "/home/hugo/Documents/Scala/scala-actors/project/project/src/main/scala-sbt-1.0",
+            "/home/hugo/Documents/Scala/scala-actors/project/project/target/scala-2.12/sbt-1.0/src_managed/main"
         ],
         "dependencies": [
             
@@ -19,7 +19,6 @@
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbt/1.10.5/sbt-1.10.5.jar",
             "/home/hugo/.sbt/boot/scala-2.12.20/lib/scala-library.jar",
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/2.0.5/sbt-bloop_2.12_1.0-2.0.5.jar",
-            "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/scala/sbt-ide-settings_2.12_1.0/1.1.2/sbt-ide-settings_2.12_1.0-1.1.2.jar",
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main_2.12/1.10.5/main_2.12-1.10.5.jar",
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.10.1/io_2.12-1.10.1.jar",
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/2.1.0/bloop-config_2.12-2.1.0.jar",
@@ -105,11 +104,11 @@
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar",
             "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar"
         ],
-        "out": "/home/hugo/Documents/cloud_data/actors/project/.bloop/actors-build",
-        "classesDir": "/home/hugo/Documents/cloud_data/actors/project/.bloop/actors-build/scala-2.12/sbt-1.0/classes",
+        "out": "/home/hugo/Documents/Scala/scala-actors/project/project/.bloop/scala-actors-build-build",
+        "classesDir": "/home/hugo/Documents/Scala/scala-actors/project/project/.bloop/scala-actors-build-build/scala-2.12/sbt-1.0/classes",
         "resources": [
-            "/home/hugo/Documents/cloud_data/actors/project/src/main/resources",
-            "/home/hugo/Documents/cloud_data/actors/project/target/scala-2.12/sbt-1.0/resource_managed/main"
+            "/home/hugo/Documents/Scala/scala-actors/project/project/src/main/resources",
+            "/home/hugo/Documents/Scala/scala-actors/project/project/target/scala-2.12/sbt-1.0/resource_managed/main"
         ],
         "scala": {
             "organization": "org.scala-lang",
@@ -117,6 +116,7 @@
             "version": "2.12.20",
             "options": [
                 "-deprecation",
+                "-Wconf:cat=unused-nowarn:s",
                 "-Wconf:cat=unused-nowarn:s",
                 "-Wconf:cat=unused-nowarn:s",
                 "-Xsource:3"
@@ -148,8 +148,8 @@
                 "import _root_.sbt._",
                 "import _root_.sbt.Keys._",
                 "import _root_.sbt.nio.Keys._",
-                "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.JUnitXmlReportPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._, _root_.sbtide.ConfigPlugin.autoImport._",
-                "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin, _root_.sbtide.ConfigPlugin"
+                "import _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt.plugins.JUnitXmlReportPlugin.autoImport._, _root_.sbt.plugins.MiniDependencyTreePlugin.autoImport._, _root_.bloop.integrations.sbt.BloopPlugin.autoImport._",
+                "import _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.SemanticdbPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.sbt.plugins.MiniDependencyTreePlugin, _root_.bloop.integrations.sbt.BloopPlugin"
             ]
         },
         "test": {
@@ -216,7 +216,7 @@
             "config": {
                 "home": "/usr/lib/jvm/java-21-openjdk-amd64",
                 "options": [
-                    "-Duser.dir=/home/hugo/Documents/cloud_data/actors/project"
+                    "-Duser.dir=/home/hugo/Documents/Scala/scala-actors/project/project"
                 ]
             },
             "mainClass": [
@@ -225,13 +225,12 @@
             "runtimeConfig": {
                 "home": "/usr/lib/jvm/java-21-openjdk-amd64",
                 "options": [
-                    "-Duser.dir=/home/hugo/Documents/cloud_data/actors/project"
+                    "-Duser.dir=/home/hugo/Documents/Scala/scala-actors/project/project"
                 ]
             },
             "classpath": [
-                "/home/hugo/Documents/cloud_data/actors/project/.bloop/actors-build/scala-2.12/sbt-1.0/classes",
+                "/home/hugo/Documents/Scala/scala-actors/project/project/.bloop/scala-actors-build-build/scala-2.12/sbt-1.0/classes",
                 "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/2.0.5/sbt-bloop_2.12_1.0-2.0.5.jar",
-                "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/scala/sbt-ide-settings_2.12_1.0/1.1.2/sbt-ide-settings_2.12_1.0-1.1.2.jar",
                 "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/2.1.0/bloop-config_2.12-2.1.0.jar",
                 "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.30.14/jsoniter-scala-core_2.12-2.30.14.jar",
                 "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar",
@@ -254,23 +253,6 @@
                             "name": "sbt-bloop",
                             "classifier": "sources",
                             "path": "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/2.0.5/sbt-bloop_2.12_1.0-2.0.5-sources.jar"
-                        }
-                    ]
-                },
-                {
-                    "organization": "org.jetbrains.scala",
-                    "name": "sbt-ide-settings",
-                    "version": "1.1.2",
-                    "configurations": "default",
-                    "artifacts": [
-                        {
-                            "name": "sbt-ide-settings",
-                            "path": "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/scala/sbt-ide-settings_2.12_1.0/1.1.2/sbt-ide-settings_2.12_1.0-1.1.2.jar"
-                        },
-                        {
-                            "name": "sbt-ide-settings",
-                            "classifier": "sources",
-                            "path": "/home/hugo/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/scala/sbt-ide-settings_2.12_1.0/1.1.2/sbt-ide-settings_2.12_1.0-1.1.2-sources.jar"
                         }
                     ]
                 },
